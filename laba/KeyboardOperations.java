@@ -8,7 +8,6 @@ class KeyboardOperations {
     }
     // 3. Метод для проверки возможности напечатать символ
     public boolean canTypeChar(char key) {
-        int index = state.getKeyIndex(key);  // Получаем индекс клавиши
         // Проверяем, можно ли напечатать заглавную латинскую букву
         if (key >= 'A' && key <= 'Z') {
             if (!state.isKeyWorking('@')) {  // Если клавиша SHIFT сломана
