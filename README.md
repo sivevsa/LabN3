@@ -527,3 +527,27 @@ KeyboardOperations analyzer = new KeyboardOperations(keyboard);
         ```
         Сломанные клавиши после переключения: e, 1, 2, 3
         ```
+12. Проверим работу клавиши SHIFT(сломана)
+
+    - **Input**:
+        ```
+        keyboard.breakKey('@');
+        System.out.println("Можно напечатать слово 'HI': " + analyzer.canTypeWord("HI"));
+        ```
+
+    - **Output**:
+        ```
+        Можно напечатать слово 'HI': false
+        ```
+13. Проверим работу клавиши SHIFT(работает)
+
+    - **Input**:
+        ```
+        keyboard.restoreKey('@');
+        System.out.println("Можно напечатать слово 'HI': " + analyzer.canTypeWord("HI"));
+        ```
+
+    - **Output**:
+        ```
+        Можно напечатать слово 'HI': true
+        ```
