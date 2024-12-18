@@ -389,6 +389,8 @@ class KeyboardTest {
         System.out.println("Все цифры сломаны?: " + analyzer.areAllDigitsBroken());
         analyzer.toggleKeysForString("do123");
         System.out.println("Сломанные клавиши после переключения: " + keyboard.getBrokenKeys());
+        keyboard.breakKey('@');
+        System.out.println("Можно напечатать слово 'HI': " + analyzer.canTypeWord("HI"));
     }
 }
 ```
